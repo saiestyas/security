@@ -18,6 +18,9 @@ Steps:
 		    directories like /includes, /modules, /profiles, /scripts, /themes
 	3-Run the script and visualize the results
 
+checkURL.txt and checkDirectory.txt files have test values, check it to see how to fill those files.
+
+
 Output results
 --------------
 
@@ -26,3 +29,4 @@ The results are visualized in two ways:
 	2-CSV file 
 
 The results show the http/https status code of the diferent performed requests.
+
