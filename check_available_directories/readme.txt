@@ -18,7 +18,8 @@ Steps:
 		    directories like /includes, /modules, /profiles, /scripts, /themes
 	3-Run the script and visualize the results
 
-checkURL.txt and checkDirectory.txt files have test values, check it to see how to fill those files.
+If you still got some doubts about what to write in checkURL.txt and checkDirectory.txt files
+please open them to read the already saved test values. Check it to see how to fill those files.
 
 
 Output results
