@@ -1,0 +1,19 @@
+1- Content Security Policy [content-security-policy: script-src 'self']: This policy helps prevent attacks such as 
+Cross Site Scripting (XSS) and other code injection attacks by defining content sources which are approved and 
+thus allowing the browser to load them.
+
+2- X-XSS-Protection [x-xss-protection: 1; mode=block]: Enable the cross-site scripting (XSS) filter built into 
+modern web browsers. This is usually enabled by default, but using it will enforce it.
+
+3- HTTP Strict Transport Security (HSTS) [Strict-Transport-Security max-age=300; includeSubdomains]:
+Security enhancement that restricts web browsers to access web servers solely over HTTPS. This ensures 
+the connection cannot be establish through an insecure HTTP connection which could be susceptible to attacks.
+
+4- X-Frame-Options [x-frame-options: SAMEORIGIN] Provides clickjacking protection by not allowing iframes 
+to load on your site.
+
+5- Public-Key-Pins [public-key-pins:]: tells the web browser to associate a public key with a certain web server 
+to prevent MITM attacks using rogue and forged X.509 certificates. 
+
+6- X-Content-Type-Options [x-content-type: nosniff] :prevents Internet Explorer and Google Chrome from sniffing 
+a response away from the declared content-type.
