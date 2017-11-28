@@ -1,6 +1,5 @@
 Description
 -----------
-
 Easy script to check :
 	1-The web server header response
 	2-All the html code of the requested url
@@ -12,11 +11,10 @@ Developed with Python 2.7
 
 How to use it
 -------------
-
 No description needed. Just run the script.
+securityHeaders.txt is just a text file with the security headers description.
 
 Output results
 --------------
-
 All results are printed in the terminal output, except the links in a url. Those are printed
 in the terminal and stored in  a txt file.
