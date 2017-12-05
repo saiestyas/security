@@ -1,0 +1,15 @@
+TRANSFER PROTOCOL,URL,STATUS, STATUS CODE DESCRIPTION
+BOTH,http://www.examples.com/usr,404, Not Found
+BOTH,https://www.examples.com/usr,404, Not Found
+BOTH,http://www.examples.com/user,404, Not Found
+BOTH,https://www.examples.com/user,404, Not Found
+BOTH,http://www.examples.com/cgi,404, Not Found
+BOTH,https://www.examples.com/cgi,404, Not Found
+BOTH,http://www.examples.com/cgi-bin,404, Not Found
+BOTH,https://www.examples.com/cgi-bin,404, Not Found
+BOTH,http://www.examples.com/admin,200, OK 
+BOTH,https://www.examples.com/admin,200, OK 
+BOTH,http://www.examples.com/wp-admin,200, OK 
+BOTH,https://www.examples.com/wp-admin,200, OK 
+BOTH,http://www.examples.com/robots.txt,200, OK 
+BOTH,https://www.examples.com/robots.txt,200, OK 

@@ -73,9 +73,21 @@ def httpCodeStatus(check_url,http_protocol):
  	print("Request to "+url)
 
  	#Make the http/https request and print the result
-	r = requests.get(url,verify=False)
-	print url+" status "+str(r.status_code)+"\n"
-    
+ 	try:
+		r = requests.get(url,verify=False)
+	except Exception as e: 
+		print("Resource not available check the error:\n\n"+str(e)+"\n") 
+		writeCSVresult(http_protocol,url,'refused connection',str(e),firstWriteFlag)
+		firstWriteFlag=False
+		continue
+		
+	print url+" status "+str(r.status_code)
+
+	if r.status_code>=200 and r.status_code<=308:
+		print 'ACCESS  \n'
+	else:
+		print 'FAILURE \n'
+    	
     #Getting the HTTP Code Description
 	statusCodeDescription=getStatusCodeDescription(str(r.status_code))
 
@@ -94,10 +106,10 @@ def writeCSVresult(http_protocol,url,status,statusCodeDescription,firstWriteFlag
     file=open('results.csv','a')
 
     if firstWriteFlag==True:
-    	file.write('TRANSFER PROTOCOL,URL,STATUS, STATUS CODE DESCRIPTION\n')
-    	file.write(http_protocol+','+url+','+status+','+statusCodeDescription+'\n')
+    	file.write('TRANSFER PROTOCOL;URL;STATUS; STATUS CODE DESCRIPTION\n')
+    	file.write(http_protocol+';'+url+';'+status+';'+statusCodeDescription+'\n')
     else:
-    	file.write(http_protocol+','+url+','+status+','+statusCodeDescription+'\n')
+    	file.write(http_protocol+';'+url+';'+status+';'+statusCodeDescription+'\n')
 	
     file.close()
 #---------------------------------------------------	

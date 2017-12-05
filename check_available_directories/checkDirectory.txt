@@ -1,3 +1,7 @@
-/queue
 /usr
-/get
+/user
+/cgi
+/cgi-bin
+/admin
+/wp-admin
+/robots.txt
